@@ -1,10 +1,9 @@
-
 <template>
   <div id="home">
     <!-- 骨架屏幕  数据未加载时显示占位-->
     <Skeleton v-show="isShowLoading" />
     <div v-if="!isShowLoading">
-      <!-- 头部地理位置和搜索框 -->
+      <!-- 头部地理和搜索框 -->
       <div class="head">
         <Header></Header>
         <!-- 轮播图 -->

@@ -46,7 +46,7 @@ const MyAddress = () => import('../views/order/children/MyAddress.vue');
 const AddAddress = () => import('../views/order/children/children/AddAddress.vue');
 const EditAddress = () => import('../views/order/children/children/EditAddress.vue');
 
-// 注册登录
+// 登录界面
 const Login = () => import('../views/login/Login.vue');
 Vue.use(Router)
 
@@ -193,12 +193,12 @@ const router = new Router({
                     requireAuth: true
                 },
                 children: [{
-                    // 添加地址
+                    // 添加
                     path: 'addAddress',
                     name: 'addAddress',
                     component: AddAddress,
                 }, {
-                    // 编辑地址
+                    // 编辑
                     path: 'editAddress',
                     name: 'editAddress',
                     component: EditAddress

@@ -8,20 +8,19 @@ export const getHomeData = () => ajax(BASE_URL + 'homeApi');
 // 特色专区
 export const getHomeSpecialZone = () => ajax(BASE_URL + 'homeApi/specialZone');
 
-/***** 分类(Category) 模块 *******/
 // Category 列表页面数据
 export const getCategoryData = () => ajax(BASE_URL + 'homeApi/categories');
 
 // Category 右边内容页面数据 需要根据左边点击传值
 export const getCategoryDetailData = (params) => ajax(BASE_URL + 'homeApi/categoriesdetail' + params);
 
-/***** 吃什么 模块 *******/
+/***** 吃什么模块 *******/
 // 今日菜单的所有菜单分类
 export const getTodayMenuCategoryList = () => ajax(BASE_URL + 'recipe/allScene');
 // 菜品菜单
 export const getTodayMenuDetail = (params) => ajax(BASE_URL + 'recipe/menulist' + params);
 
-/***** 购物车页面 猜你喜欢*********/
+/***** 购物车页面猜你喜欢*********/
 export const getGuessYouLike = () => ajax(BASE_URL + 'cart/youlike');
 
 /***** 登录界面接口 *********/

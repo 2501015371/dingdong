@@ -159,17 +159,17 @@ export default {
     };
   },
   computed: {
-    // 1.手机号码验证
+    // 手机号码验证
     phoneNumberRight () {
       let value = this.isShowSMSLogin ? this.login_phone : this.login_userName;
-      // 1.1 当输入的手机号大于10位进行验证
+      // 当输入的手机号大于10位进行验证
       if (value.length > 10) {
         return /[1][3,4,5,6,7,8][0-9]{9}$/.test(value);
       } else {
         return true;
       }
     },
-    // 2.发送验证码按钮显示
+    // 发送验证码按钮显示
     captchaDisable () {
       if (this.login_phone.length > 10 && this.phoneNumberRight) {
         return false;
@@ -179,7 +179,7 @@ export default {
     }
   },
   methods: {
-    // 0.mapActions 同步用户信息
+    // 同步用户信息
     ...mapActions(['syncuserInfo']),
     // 1.账号密码登录及短信验证码切换
     switchLogin () {
@@ -307,7 +307,6 @@ export default {
       } else {
         // 6.1 请求后台登录接口
         let ref = await phoneCaptchaLogin(this.register_userName, this.register_pwd);
-        // 设置userInfo 保存到vuex和本地
         this.syncuserInfo(ref.data);
         this.$router.back();
       }
