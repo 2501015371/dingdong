@@ -81,7 +81,7 @@ export default {
     Skeleton
   },
   methods: {
-    // Vuex中的方法
+    // Vuex方法
     ...mapMutations(['ADD_GOODS', 'ADD_TO_CART']),
     // 数据初始化
     async _initData () {
